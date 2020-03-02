@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<archive>
+    <dir sourceOnDisk="/Users/dilloncarns/Projects/guide-containerize/start/system/src/main/webapp" targetInArchive="/"/>
+    <dir sourceOnDisk="/Users/dilloncarns/Projects/guide-containerize/start/system/target/classes" targetInArchive="/WEB-INF/classes"/>
+    <file sourceOnDisk="/Users/dilloncarns/Projects/guide-containerize/start/system/target/tmp/META-INF/MANIFEST.MF" targetInArchive="/META-INF/MANIFEST.MF"/>
+</archive>

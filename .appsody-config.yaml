@@ -1,2 +1,0 @@
-project-name: appmod-sampleapp
-stack: docker.io/kabanero/java-microprofile:0.2
