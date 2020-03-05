@@ -12,9 +12,6 @@ import javax.ws.rs.core.Response;
 @Path("")
 public class WebResource {
 
-  @Inject
-  XKCDManager manager;
-
   @GET
   @Produces(MediaType.TEXT_HTML)
   public Response getCalculator() {
