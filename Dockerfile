@@ -21,7 +21,7 @@ COPY --chown=1001:0 \
     /config/
 
 COPY --chown=1001:0 \
-    target/inventory.war \
+    target/dm-calculator.war \
     /config/apps
 
 RUN configure.sh
