@@ -27,9 +27,10 @@ public class WebResource {
           "function dis(val)\n" +
           "{ document.getElementById(\"result\").value+=val; }\n" +  
           "function solve() {\n" +
-          "let x = document.getElementById(\"result\").value; \n" +
+          "try { let x = document.getElementById(\"result\").value; \n" +
                     "let y = eval(x);\n" +
-                    "document.getElementById(\"result\").value = y; }\n" +
+                    "document.getElementById(\"result\").value = y;}\ncatch(err)\n"+
+                    "{ document.getElementById(\"result\").value = 'ERROR'; } }\n" +
                 "function clr() { document.getElementById(\"result\").value = \"\"; }\n" +
           "</script>\n" +
              "<style>\n" +
@@ -172,8 +173,10 @@ public class WebResource {
                         "grid-area: 2 / 4 / 6 / 5; }\n" +
                 "</style> \n" +
           "</head> <body> \n" +
-          "<div class=\"leaf\"><div><img src=\"http://www.pngmart.com/files/1/Fall-Autumn-Leaves-Transparent-PNG.png\" height=\"75px\" width=\"75px\"></img></div></div>\n" +
-             "<div class=\"calculator\">\n" +
+          "<div class=\"leaf\"><div><img src=\"http://www.pngmart.com/files/1/Fall-Autumn-Leaves-Transparent-PNG.png\" height=\"75px\" width=\"75px\"></img></div>\n" +
+             "<div><img src=\"http://www.pngmart.com/files/1/Fall-Autumn-Leaves-Transparent-PNG.png\" height=\"75px\" width=\"75px\"></img></div>\n" +
+             "<div><img src=\"http://www.pngmart.com/files/1/Transparent-Autumn-Leaves-Falling-PNG.png\" height=\"75px\" width=\"75px\"></img></div>\n" +
+             "</div><div class=\"calculator\">\n" +
              "<input type=\"text\" id=\"result\" class=\"result\" value=\"\" />\n" +
              "<div class=\"calculator-keys\">\n" +
                "<button onclick=\"dis('+')\" type=\"button\" class=\"operator\" value=\"+\">+</button>\n" +
