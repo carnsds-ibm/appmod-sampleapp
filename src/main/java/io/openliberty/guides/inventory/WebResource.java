@@ -12,13 +12,8 @@ import javax.ws.rs.core.Response;
 @Path("")
 public class WebResource {
 
-  private static String xkcdRestUriA = "http://xkcd.com/";
-  private static String xkcdRestUriB = "/info.0.json";
-
   @Inject
   XKCDManager manager;
-
-  private String body = "";
 
   @GET
   @Produces(MediaType.TEXT_HTML)
@@ -84,15 +79,5 @@ public class WebResource {
                    "<td><input type=\"button\" value=\"*\" onclick=\"dis('*')\"/> </td>\n" + 
                 "</tr> </table> </body> </html>"
         ).build();
-  }
-
-  private boolean isInteger(String number) {
-    boolean isInt = false;
-    try {
-      isInt = Integer.parseInt(number) >= 0;
-    } catch(Exception e) {
-      isInt = false;
-    }
-    return isInt;
   }
 }
