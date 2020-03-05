@@ -1,5 +1,44 @@
 <html>
+    <script>
+        // function getImageBig(){
+        //     async function getImg(url = '', data = {}){
+        //         console.log('hello world');
+        //         const response = await (fetchurl, {
+        //             method: 'GET',
+        //             mode: 'no-cors',
+        //             body: JSON.stringify(data)
+        //     });
+        //         return await response.json();
+        //     }
+        
+        // function getData('https://xkcd.com/1/info.0.json')
+        //     .then((data) => {
+        //         console.log(data)
+        //         const imgUrl = data.img.toString()
+        //         document.write('<img src="' + imgurl + '">')
+        //     })
+    
+            function helloWorld(){
+                 fetch('https://xkcd.com/1/info.0.json', {mode: "no-cors"}).then(function(response) {
+                    response.json().then(function(text) {
+                        console.log(response.json());
+                    });
+                });
+            }
+    
+            window.onload = function() {
+            document.getElementById("bepis").onclick = function fun() {
+                helloWorld();
+            }
+            }
+        
+        // getData()}
+        </script>
 <body>
+
+    <h1 id="bepis" onClick='helloWorld();' >Your comic: </h1>
+
+
     <h1>Welcome to your Liberty Application</h1>
     <p>Thanks for generating this project using the app accelerator.  Please see below for some extra information on each of the technologies you chose</p>
 <div>
